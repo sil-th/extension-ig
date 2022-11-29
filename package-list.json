@@ -1,0 +1,16 @@
+{
+  "package-id": "silth.fhir.th.extensions",
+  "canonical": "https://fhir-ig.sil-th.org/extensions/",
+  "title": "SIL-TH FHIR Extension Library",
+  "introduction": "A repository for SIL-TH's related extension artifacts",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "https://fhir-ig.sil-th.org/extensions/",
+      "status": "ci-build",
+      "current": true,
+      "fhirversion": "4.3.0"
+    }
+  ]
+}
