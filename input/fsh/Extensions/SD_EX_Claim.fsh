@@ -407,3 +407,182 @@ Description: "รหัสสิทธิการรักษาอื่นก
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_eClaim_AccidentCoverage (extensible)
+
+
+
+
+Extension: EX_CHI_AuthStation
+Id: ex-claim-auth-station
+Title: "Claim: CHI - Author Station"
+Description: "จุดเก็บค่ารักษา (สถานี) ที่บันทึกธุรกรรมนี้ (ที่มา: สกส. CSOP Billtran)"
+* ^url = $EX_CHI_AuthStation
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "จุดเก็บค่ารักษา (สถานี) ที่บันทึกธุรกรรมนี้ (ที่มา: สกส. CSOP Billtran)"
+* . ^definition = "จุดเก็บค่ารักษา (สถานี) ที่บันทึกธุรกรรมนี้"
+* url = $EX_CHI_AuthStation (exactly)
+* value[x] 1..
+* value[x] only Reference(Location)
+
+
+Extension: EX_CHI_BillNo
+Id: ex-claim-bill-no
+Title: "Claim: CHI - Bill No."
+Description: "เลขที่ใบเสร็จที่ออกให้แก่ผู้รับบริการ (ที่มา: สกส. CSOP Billtran)"
+* ^url = $EX_CHI_BillNo
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "เลขที่ใบเสร็จที่ออกให้แก่ผู้รับบริการ (ที่มา: สกส. CSOP Billtran)"
+* . ^definition = "เลขที่ใบเสร็จที่ออกให้แก่ผู้รับบริการ, เช่นกรณีมีค่าใช้จ่ายส่วนที่เบิกไม่ได้"
+* url = $EX_CHI_BillNo (exactly)
+* value[x] 1..
+* valueString 1..
+
+
+Extension: EX_CHI_TotalCharge
+Id: ex-claim-total-charge
+Title: "Claim: CHI - Total Charge"
+Description: "ยอดเงินรวมการเรียกเก็บค่ารักษา (ที่มา: สกส. CSOP Billtran)"
+* ^url = $EX_CHI_TotalCharge
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "ยอดเงินรวมการเรียกเก็บค่ารักษา (ที่มา: สกส. CSOP Billtran)"
+* . ^definition = "ยอดเงินรวมการเรียกเก็บค่ารักษา"
+* url = $EX_CHI_TotalCharge (exactly)
+* value[x] 1..
+* value[x] only Money
+
+
+Extension: EX_CHI_TotalOtherPay
+Id: ex-claim-total-otherpay
+Title: "Claim: CHI - Total Other Pay"
+Description: "ยอดเงินรวมส่วนที่สิทธิฯ หรือผู้ร่วมจ่ายอื่น ร่วมจ่าย (ที่มา: สกส. CSOP Billtran)"
+* ^url = $EX_CHI_TotalOtherPay
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "ยอดเงินรวมส่วนที่สิทธิฯ หรือผู้ร่วมจ่ายอื่น ร่วมจ่าย (ที่มา: สกส. CSOP Billtran)"
+* . ^definition = "ยอดเงินรวมส่วนที่สิทธิฯ หรือผู้ร่วมจ่ายอื่น ร่วมจ่าย"
+* url = $EX_CHI_TotalOtherPay (exactly)
+* value[x] 1..
+* value[x] only Money
+
+
+Extension: EX_CHI_ReimburserType
+Id: ex-chi-claim-reimburser-type
+Title: "Claim: CHI - Reimburser Type"
+Description: "ประเภทผู้เบิก (ที่มา: สกส. CSOP BillDisp)"
+* ^url = $EX_CHI_ReimburserType
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "ประเภทผู้เบิก (ที่มา: สกส. CSOP BillDisp)"
+* . ^definition = "ประเภทผู้เบิก"
+* url = $EX_CHI_ReimburserType (exactly)
+* value[x] 1..
+* value[x] only CodeableConcept
+* value[x] from $VS_CHI_ReimburserType (extensible)
+
+
+
+Extension: EX_CHI_ItemCharge
+Id: ex-claim-item-charge
+Title: "Claim: CHI - Item Charge"
+Description: "ราคาขายต่อหน่วย (ที่มา: สกส. CSOP Billtran)"
+* ^url = $EX_CHI_ItemCharge
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim.item"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail.subDetail"
+* . 0..*
+* . ^short = "ราคาขายต่อหน่วย (ที่มา: สกส. CSOP Billtran)"
+* . ^definition = "ราคาขายต่อหน่วย"
+* url = $EX_CHI_ItemCharge (exactly)
+* value[x] 1..
+* value[x] only Money
+
+
+Extension: EX_CHI_ItemNetCharge
+Id: ex-claim-item-net-charge
+Title: "Claim: CHI - Item Charge"
+Description: "รวมราคาขาย (ที่มา: สกส. CSOP Billtran)"
+* ^url = $EX_CHI_ItemNetCharge
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim.item"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail.subDetail"
+* . 0..*
+* . ^short = "รวมราคาขาย (ที่มา: สกส. CSOP Billtran)"
+* . ^definition = "รวมราคาขาย"
+* url = $EX_CHI_ItemNetCharge (exactly)
+* value[x] 1..
+* value[x] only Money
+
+
+
+
+Extension: EX_CHI_ClaimCondition
+Id: ex-chi-claim-condition
+Title: "Claim: CHI - Item Charge"
+Description: "เงื่อนไขกำกับการเบิก (ที่มา: สกส. CSOP Billtran)"
+* ^url = $EX_CHI_ClaimCondition
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim.item"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail.subDetail"
+* . 0..*
+* . ^short = "เงื่อนไขกำกับการเบิก (ที่มา: สกส. CSOP Billtran)"
+* . ^definition = "เงื่อนไขกำกับการเบิก"
+* url = $EX_CHI_ClaimCondition (exactly)
+* value[x] 1..
+* value[x] only CodeableConcept
+* value[x] from $VS_CHI_ClaimCondition (extensible)

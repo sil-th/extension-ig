@@ -100,6 +100,14 @@ Alias: $EX_TH_ClaimIpdDRG = https://fhir-ig.sil-th.org/extensions/StructureDefin
 Alias: $EX_TH_ClaimAccidentDateTime = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-accident-datetime
 Alias: $EX_TH_ClaimItemDetailDateTime = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-item-detail-datetime
 Alias: $EX_TH_ClaimInsuranceAEType = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-insurance-aetype
+Alias: $EX_CHI_BillNo = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-bill-no
+Alias: $EX_CHI_AuthStation = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-auth-station
+Alias: $EX_CHI_TotalCharge = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-total-charge
+Alias: $EX_CHI_TotalOtherPay = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-total-otherpay
+Alias: $EX_CHI_ReimburserType = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-chi-claim-reimburser-type
+Alias: $EX_CHI_ItemCharge = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-item-charge
+Alias: $EX_CHI_ItemNetCharge = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-item-net-charge
+Alias: $EX_CHI_ClaimCondition = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-chi-claim-condition
 
 
 // Account
@@ -123,6 +131,9 @@ Alias: $EX_TH_MedicationRequestDosageCode = https://fhir-ig.sil-th.org/extension
 
 // MedicationDispense
 Alias: $EX_TH_MedicationDispenseDeliveryMode = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationdispense-med-delivery-mode
+Alias: $EX_CHI_ProductCat = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-chi-product-cat
+Alias: $EX_CHI_PackSize = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-chi-packsize
+Alias: $EX_CHI_SigCode = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-chi-sigcode
 
 // Medication
 Alias: $EX_TH_MedicationImageUrl = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medication-image-url

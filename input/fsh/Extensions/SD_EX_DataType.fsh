@@ -53,11 +53,31 @@ Description: "รหัสที่อยู่ ตามกรมการป�
 * . ^short = "รหัสที่อยู่ ตามกรมการปกครอง"
 * . ^definition = "รหัสที่อยู่ ตามกรมการปกครอง"
 * url = $EX_TH_AddressDopaCode (exactly)
-* value[x] 1..
-* value[x] only CodeableConcept
-* value[x] from $VS_DOPA_Location (extensible)
-
-
+* extension contains
+    changwat 0..1 and
+    amphur 0..1 and
+    tumbol 0..1
+* extension[changwat] only Extension
+* extension[changwat] ^short = "จังหวัด"
+* extension[changwat] ^definition = "จังหวัด"
+  * url = "changwat" (exactly)
+  * value[x] 1..
+  * value[x] only CodeableConcept
+  * value[x] from $VS_DOPA_Location_City (extensible)
+* extension[amphur] only Extension
+* extension[amphur] ^short = "อำเภอ"
+* extension[amphur] ^definition = "อำเภอ"
+  * url = "amphur" (exactly)
+  * value[x] 1..
+  * value[x] only CodeableConcept
+  * value[x] from $VS_DOPA_Location_District (extensible)
+* extension[tumbol] only Extension
+* extension[tumbol] ^short = "ตำบล"
+* extension[tumbol] ^definition = "ตำบล"
+  * url = "tumbol" (exactly)
+  * value[x] 1..
+  * value[x] only CodeableConcept
+  * value[x] from $VS_DOPA_Location_Subdistrict (extensible)
 
 
 Extension: EX_TH_AddressStructuredLine

@@ -21,3 +21,65 @@ Description: "การส่งมอบยา (กรณีจ่ายไป�
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_43Plus_MedDelivery (extensible)
+
+
+
+Extension: EX_CHI_ProductCat
+Id: ex-claim-chi-product-cat
+Title: "Claim: CHI - Product Category"
+Description: "ประเภทยาและเวชภัณฑ์ (ที่มา: สกส. CSOP BillDisp)"
+* ^url = $EX_CHI_ProductCat
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationDispense"
+* . 0..*
+* . ^short = "ประเภทยาและเวชภัณฑ์ (ที่มา: สกส. CSOP BillDisp)"
+* . ^definition = "ประเภทยาและเวชภัณฑ์"
+* url = $EX_CHI_ProductCat (exactly)
+* value[x] 1..
+* value[x] only CodeableConcept
+* value[x] from $VS_CHI_ProductCat (extensible)
+
+
+Extension: EX_CHI_PackSize
+Id: ex-claim-chi-packsize
+Title: "Claim: CHI - Pack Size"
+Description: "ขนาดบรรจุ (ที่มา: สกส. CSOP BillDisp)"
+* ^url = $EX_CHI_PackSize
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationDispense"
+* . 0..*
+* . ^short = "ขนาดบรรจุ (ที่มา: สกส. CSOP BillDisp)"
+* . ^definition = "ขนาดบรรจุ"
+* url = $EX_CHI_PackSize (exactly)
+* value[x] 1..
+* value[x] only integer
+
+
+Extension: EX_CHI_SigCode
+Id: ex-claim-chi-sigcode
+Title: "Claim: CHI - Sig Code"
+Description: "รหัสวิธีใช้ยา (ที่มา: สกส. CSOP BillDisp)"
+* ^url = $EX_CHI_SigCode
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationDispense.dosageInstruction"
+* . 0..*
+* . ^short = "รหัสวิธีใช้ยา (ที่มา: สกส. CSOP BillDisp)"
+* . ^definition = "รหัสวิธีใช้ยา"
+* url = $EX_CHI_SigCode (exactly)
+* value[x] 1..
+* value[x] only string
