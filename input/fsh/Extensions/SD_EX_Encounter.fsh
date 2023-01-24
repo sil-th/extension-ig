@@ -350,3 +350,25 @@ Description: "เลขที่ใบส่งตัว"
 * value[x] only Reference(ServiceRequest)
 
 
+
+Extension: EX_CHI_EncounterAdmitType
+Id: ex-chi-encounter-admit-type
+Title: "Encounter: CHI - Admit Type"
+Description: "รหัสประเภทการรับ admit"
+* ^url = $EX_CHI_EncounterAdmitType
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2022-08-23T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context.type = #element
+* ^context.expression = "Encounter.hospitalization"
+* . 0..*
+* . ^short = "รหัสประเภทการรับ admit"
+* . ^definition = "รหัสประเภทการรับ admit"
+* url = $EX_CHI_EncounterAdmitType (exactly)
+* value[x] 1..
+* value[x] only CodeableConcept
+* value[x] from $VS_CHI_AdmitType (extensible)
+
+

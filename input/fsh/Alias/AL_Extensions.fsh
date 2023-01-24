@@ -10,6 +10,11 @@ Alias: $EX_HL7_Geolocation = http://hl7.org/fhir/StructureDefinition/geolocation
 Alias: $EX_HL7_PreCondition = http://hl7.org/fhir/StructureDefinition/servicerequest-precondition
 
 
+// Profile on FHIR core
+Alias: $EX_TH_Patient_Nationality = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-th-patient-nationality
+Alias: $EX_TH_Patient_Religion = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-th-patient-religion
+Alias: $EX_TH_Patient_Disability = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-th-patient-extension-disability
+
 
 // From local extension
 
@@ -49,6 +54,7 @@ Alias: $EX_TH_EncounterFpCaseType = https://fhir-ig.sil-th.org/extensions/Struct
 Alias: $EX_TH_EncounterLeaveDay = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-encounter-leave-day
 Alias: $EX_TH_EncounterProviderType = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-encounter-provider-type
 Alias: $EX_TH_EncounterReferOutID = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-encounter-refer-out-id
+Alias: $EX_CHI_EncounterAdmitType = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-chi-encounter-admit-type
 
 // Condition and EpisodeOfCare
 Alias: $EX_TH_ConditionChronicDischargeReason = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-condition-chronic-discharge-reason
@@ -112,6 +118,14 @@ Alias: $EX_CHI_ReimburserType = https://fhir-ig.sil-th.org/extensions/StructureD
 Alias: $EX_CHI_ItemCharge = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-item-charge
 Alias: $EX_CHI_ItemNetCharge = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-item-net-charge
 Alias: $EX_CHI_ClaimCondition = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-chi-claim-condition
+Alias: $EX_CHI_AuthDateTime = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-chi-claim-auth-datetime
+Alias: $EX_CHI_ProjectCode = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-chi-project-code
+Alias: $EX_CHI_TotalDiscount = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-chi-claim-total-discount
+Alias: $EX_CHI_TotalDrg = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-total-drg
+Alias: $EX_CHI_TotalXDrg = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-total-xdrg
+Alias: $EX_CHI_ItemDiscount = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-item-discount
+Alias: $EX_CHI_ItemClaimCat = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-chi-item-claimcat
+Alias: $EX_CHI_ItemRevDateTime = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-chi-item-rev-datetime
 
 
 // Account
@@ -130,13 +144,12 @@ Alias: $EX_TH_ObservationDeviceAmount = https://fhir-ig.sil-th.org/extensions/St
 Alias: $EX_TH_MedicationRequestSource = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationrequest-medication-source
 Alias: $EX_TH_MedicationRequestNedCriteria = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationrequest-ned-criteria
 Alias: $EX_TH_MedicationRequestApprovedNo = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationrequest-med-approved-no
-
+Alias: $EX_TH_MedicationRequestDosageCode = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationrequest-med-dosage-code
 
 // MedicationDispense
 Alias: $EX_TH_MedicationDispenseDeliveryMode = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationdispense-med-delivery-mode
 Alias: $EX_CHI_ProductCat = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-chi-product-cat
 Alias: $EX_CHI_PackSize = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-chi-packsize
-Alias: $EX_CHI_SigCode = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-claim-chi-sigcode
 
 // Medication
 Alias: $EX_TH_MedicationImageUrl = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medication-image-url

@@ -20,7 +20,7 @@ Description: "ราคาทุนของรายการนั้น"
 * url = $EX_TH_ClaimItemCost (exactly)
 * value[x] 1..
 * value[x] only Money
-
+* valueMoney.currency = #THB (exactly)
 
 
 
@@ -46,7 +46,7 @@ Description: "ค่าบริการที่ต้องจ่าย ข�
 * url = $EX_TH_ClaimItemCopay (exactly)
 * value[x] 1..
 * value[x] only Money
-
+* valueMoney.currency = #THB (exactly)
 
 
 
@@ -73,7 +73,7 @@ Description: "ค่าบริการที่ได้จ่ายไปแ
 * url = $EX_TH_ClaimItemPaid (exactly)
 * value[x] 1..
 * value[x] only Money
-
+* valueMoney.currency = #THB (exactly)
 
 
 
@@ -100,7 +100,7 @@ Description: "ค่าบริการที่ยังไม่ได้จ
 * url = $EX_TH_ClaimItemUnpaid (exactly)
 * value[x] 1..
 * value[x] only Money
-
+* valueMoney.currency = #THB (exactly)
 
 
 
@@ -129,7 +129,7 @@ Description: "ราคาทุน ทั้งหมด"
 * url = $EX_TH_ClaimTotalCost (exactly)
 * value[x] 1..
 * value[x] only Money
-
+* valueMoney.currency = #THB (exactly)
 
 
 
@@ -160,7 +160,7 @@ Description: "ราคาร่วมจ่าย ทั้งหมด"
 * url = $EX_TH_ClaimTotalCopay (exactly)
 * value[x] 1..
 * value[x] only Money
-
+* valueMoney.currency = #THB (exactly)
 
 
 
@@ -191,7 +191,7 @@ Description: "จำนวนเงินที่ได้จ่ายไปแ
 * url = $EX_TH_ClaimTotalPaid (exactly)
 * value[x] 1..
 * value[x] only Money
-
+* valueMoney.currency = #THB (exactly)
 
 
 
@@ -222,7 +222,7 @@ Description: "จำนวนเงินที่ยังไม่จ่าย
 * url = $EX_TH_ClaimTotalUnpaid (exactly)
 * value[x] 1..
 * value[x] only Money
-
+* valueMoney.currency = #THB (exactly)
 
 
 
@@ -469,6 +469,7 @@ Description: "ยอดเงินรวมการเรียกเก็บ
 * url = $EX_CHI_TotalCharge (exactly)
 * value[x] 1..
 * value[x] only Money
+* valueMoney.currency = #THB (exactly)
 
 
 Extension: EX_CHI_TotalOtherPay
@@ -489,6 +490,7 @@ Description: "ยอดเงินรวมส่วนที่สิทธิ
 * url = $EX_CHI_TotalOtherPay (exactly)
 * value[x] 1..
 * value[x] only Money
+* valueMoney.currency = #THB (exactly)
 
 
 Extension: EX_CHI_ReimburserType
@@ -535,6 +537,7 @@ Description: "ราคาขายต่อหน่วย (ที่มา: �
 * url = $EX_CHI_ItemCharge (exactly)
 * value[x] 1..
 * value[x] only Money
+* valueMoney.currency = #THB (exactly)
 
 
 Extension: EX_CHI_ItemNetCharge
@@ -559,7 +562,7 @@ Description: "รวมราคาขาย (ที่มา: สกส. CSOP B
 * url = $EX_CHI_ItemNetCharge (exactly)
 * value[x] 1..
 * value[x] only Money
-
+* valueMoney.currency = #THB (exactly)
 
 
 
@@ -586,3 +589,182 @@ Description: "เงื่อนไขกำกับการเบิก (ท�
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_CHI_ClaimCondition (extensible)
+
+
+
+Extension: EX_CHI_AuthDateTime
+Id: ex-chi-claim-auth-datetime
+Title: "Claim: CHI - Auth Datetime"
+Description: "วันที่และเวลาที่ ได้ AuthCode ตอบรับจากระบบ (ที่มา: สกส. CIPN ClaimAuth)"
+* ^url = $EX_CHI_AuthDateTime
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim.insurance.preAuthRef"
+* . 0..*
+* . ^short = "วันที่และเวลาที่ ได้ AuthCode ตอบรับจากระบบ (ที่มา: สกส. CIPN ClaimAuth)"
+* . ^definition = "วันที่และเวลาที่ ได้ AuthCode ตอบรับจากระบบ"
+* url = $EX_CHI_AuthDateTime (exactly)
+* value[x] 1..
+* value[x] only dateTime
+
+
+Extension: EX_CHI_ProjectCode
+Id: ex-chi-project-code
+Title: "Claim: CHI - Project Code"
+Description: "รหัสเบิกโครงการพิเศษหรือเฉพาะกิจ (ที่มา: สกส. CIPN ClaimAuth)"
+* ^url = $EX_CHI_ProjectCode
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "รหัสเบิกโครงการพิเศษหรือเฉพาะกิจ (ที่มา: สกส. CIPN ClaimAuth)"
+* . ^definition = "รหัสเบิกโครงการพิเศษหรือเฉพาะกิจ"
+* url = $EX_CHI_ProjectCode (exactly)
+* value[x] 1..
+* value[x] only string
+
+
+
+Extension: EX_CHI_TotalDiscount
+Id: ex-claim-total-discount
+Title: "Claim: CHI - Total Discount"
+Description: "ส่วนลดทั้งหมดนอกส่วนลดในรายการ BillItems (ที่มา: สกส. CIPN Invoices)"
+* ^url = $EX_CHI_TotalDiscount
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "ส่วนลดทั้งหมดนอกส่วนลดในรายการ BillItems (ที่มา: สกส. CIPN Invoices)"
+* . ^definition = "ส่วนลดทั้งหมดนอกส่วนลดในรายการ BillItems"
+* url = $EX_CHI_TotalDiscount (exactly)
+* value[x] 1..
+* value[x] only Money
+* valueMoney.currency = #THB (exactly)
+
+
+Extension: EX_CHI_TotalDrg
+Id: ex-claim-total-drg
+Title: "Claim: CHI - Total DRG"
+Description: "ยอดค่าใช้จ่ายส่วนที่ใช้กับ DRG (ที่มา: สกส. CIPN Invoices)"
+* ^url = $EX_CHI_TotalDrg
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "ยอดค่าใช้จ่ายส่วนที่ใช้กับ DRG (ที่มา: สกส. CIPN Invoices)"
+* . ^definition = "ยอดค่าใช้จ่ายส่วนที่ใช้กับ DRG"
+* url = $EX_CHI_TotalDrg (exactly)
+* value[x] 1..
+* value[x] only Money
+* valueMoney.currency = #THB (exactly)
+
+
+Extension: EX_CHI_TotalXDrg
+Id: ex-claim-total-xdrg
+Title: "Claim: CHI - Total X DRG"
+Description: "ยอดค่าใช้จ่ายเบิกนอก DRG (ที่มา: สกส. CIPN Invoices)"
+* ^url = $EX_CHI_TotalXDrg
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "ยอดค่าใช้จ่ายเบิกนอก DRG (ที่มา: สกส. CIPN Invoices)"
+* . ^definition = "ยอดค่าใช้จ่ายเบิกนอก DRG"
+* url = $EX_CHI_TotalXDrg (exactly)
+* value[x] 1..
+* value[x] only Money
+* valueMoney.currency = #THB (exactly)
+
+
+Extension: EX_CHI_ItemDiscount
+Id: ex-claim-item-discount
+Title: "Claim: CHI - Item Discount"
+Description: "ส่วนลดในรายการ (ที่มา: สกส. CIPN Invoices)"
+* ^url = $EX_CHI_ItemDiscount
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim.item"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail.subDetail"
+* . 0..*
+* . ^short = "ส่วนลดในรายการ (ที่มา: สกส. CIPN Invoices)"
+* . ^definition = "ส่วนลดในรายการ"
+* url = $EX_CHI_ItemDiscount (exactly)
+* value[x] 1..
+* value[x] only Money
+* valueMoney.currency = #THB (exactly)
+
+
+Extension: EX_CHI_ItemClaimCat
+Id: ex-chi-item-claimcat
+Title: "Claim: Item Claim Category"
+Description: "รหัสประเภทการเบิก (ที่มา: สกส. CIPN Invoices)"
+* ^url = $EX_CHI_ItemClaimCat
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim.item"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail.subDetail"
+* . 0..*
+* . ^short = "รหัสประเภทการเบิก (ที่มา: สกส. CIPN Invoices)"
+* . ^definition = "รหัสประเภทการเบิก (ที่มา: สกส. CIPN Invoices)"
+* url = $EX_CHI_ItemClaimCat (exactly)
+* value[x] 1..
+* value[x] only CodeableConcept
+* value[x] from $VS_CHI_ItemClaimCat (extensible)
+
+
+Extension: EX_CHI_ItemRevDateTime
+Id: ex-chi-item-rev-datetime
+Title: "Claim: CHI - Item Revision Datetime"
+Description: "วันที่ล่าสุดของการปรับปรุงรายการ (ที่มา: สกส. CIPN Invoices)"
+* ^url = $EX_CHI_ItemRevDateTime
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim.item"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail"
+* ^context[+].type = #element
+* ^context[=].expression = "Claim.item.detail.subDetail"
+* . 0..*
+* . ^short = "วันที่ล่าสุดของการปรับปรุงรายการ (ที่มา: สกส. CIPN Invoices)"
+* . ^definition = "วันที่ล่าสุดของการปรับปรุงรายการ"
+* url = $EX_CHI_ItemRevDateTime (exactly)
+* value[x] 1..
+* value[x] only dateTime

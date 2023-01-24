@@ -63,23 +63,3 @@ Description: "ขนาดบรรจุ (ที่มา: สกส. CSOP Bill
 * url = $EX_CHI_PackSize (exactly)
 * value[x] 1..
 * value[x] only integer
-
-
-Extension: EX_CHI_SigCode
-Id: ex-claim-chi-sigcode
-Title: "Claim: CHI - Sig Code"
-Description: "รหัสวิธีใช้ยา (ที่มา: สกส. CSOP BillDisp)"
-* ^url = $EX_CHI_SigCode
-* ^version = "4.3.0"
-* ^status = #draft
-* ^experimental = false
-* ^date = "2023-01-17T07:06:13+11:00"
-* ^publisher = "SIL-TH"
-* ^context[0].type = #element
-* ^context[=].expression = "MedicationDispense.dosageInstruction"
-* . 0..*
-* . ^short = "รหัสวิธีใช้ยา (ที่มา: สกส. CSOP BillDisp)"
-* . ^definition = "รหัสวิธีใช้ยา"
-* url = $EX_CHI_SigCode (exactly)
-* value[x] 1..
-* value[x] only string
