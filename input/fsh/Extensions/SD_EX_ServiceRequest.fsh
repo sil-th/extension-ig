@@ -1,7 +1,7 @@
 
 Extension: EX_TH_ServiceRequestReferPatientCatagory
 Id: ex-servicerequest-refer-patient-category
-Title: "ServiceReques: Refer Patient Category"
+Title: "ServiceRequest: Refer Patient Category"
 Description: "รหัสประเภทผู้ป่วยสำหรับการส่งต่อ"
 * ^url = $EX_TH_ServiceRequestReferPatientCatagory
 * ^version = "4.3.0"

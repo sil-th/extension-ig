@@ -202,6 +202,8 @@ Alias: $CS_eClaim_ProcedureType = https://terms.sil-th.org/CodeSystem/cs-eclaim-
 
 // Finance
 Alias: $CS_43Plus_CoverageUse = https://terms.sil-th.org/CodeSystem/cs-43plus-coverage-use
+Alias: $CS_eClaim_CoverageType = https://terms.sil-th.org/CodeSystem/cs-eclaim-coverage-type
+Alias: $CS_eClaim_ChargeItem = https://terms.sil-th.org/CodeSystem/cs-eclaim-charge-item
 Alias: $CS_eClaim_AdpType = https://terms.sil-th.org/CodeSystem/cs-eclaim-adp-type
 
 
@@ -230,13 +232,16 @@ Alias: $CS_THCC_CommunityActivity = https://terms.sil-th.org/CodeSystem/cs-thcc-
 Alias: $CS_THCC_CommunityService = https://terms.sil-th.org/CodeSystem/cs-thcc-community-service
 
 
-
 // CHI - CSOP, CIPN, SSI, AIPN
 Alias: $CS_CHI_ReimburserType = https://terms.sil-th.org/CodeSystem/cs-chi-reimburser-type
 Alias: $CS_CHI_ProductCat = https://terms.sil-th.org/CodeSystem/cs-chi-product-cat
 Alias: $CS_CHI_ClaimCondition = https://terms.sil-th.org/CodeSystem/cs-chi-claim-condition
 Alias: $CS_CHI_SubstitutionCode = https://terms.sil-th.org/CodeSystem/cs-chi-substitution-code
+Alias: $CS_CHI_ServiceClass = https://terms.sil-th.org/CodeSystem/cs-chi-service-class
+Alias: $CS_CHI_ProviderType = https://terms.sil-th.org/CodeSystem/cs-chi-provider-type
 Alias: $CS_CHI_TypeServ = https://terms.sil-th.org/CodeSystem/cs-chi-typeserv
+Alias: $CS_CHI_TypeIn = https://terms.sil-th.org/CodeSystem/cs-chi-typein
+Alias: $CS_CHI_TypeOut = https://terms.sil-th.org/CodeSystem/cs-chi-typeout
 Alias: $CS_CHI_Clinic = https://terms.sil-th.org/CodeSystem/cs-chi-clinic
 
 
@@ -260,6 +265,7 @@ Alias: $CS_TH_ICD10TM = https://terms.sil-th.org/CodeSystem/cs-th-icd10tm
 Alias: $CS_TH_ICD10TM_Lab = https://terms.sil-th.org/CodeSystem/cs-th-icd10tm-lab
 Alias: $CS_TH_FeeCategory = https://terms.sil-th.org/CodeSystem/cs-th-fee-category
 Alias: $CS_TH_IdentifierType = https://terms.sil-th.org/CodeSystem/cs-th-identifier-type
+Alias: $CS_eClaim_serviceFee = https://terms.sil-th.org/CodeSystem/cs-eclaim-service-fee
 
 
 // Local codes

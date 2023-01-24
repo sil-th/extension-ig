@@ -68,22 +68,4 @@ Description: "เลขที่ได้รับการอนุมัติ
 
 
 
-Extension: EX_TH_MedicationRequestDosageCode
-Id: ex-medicationrequest-med-dosage-code
-Title: "MedicationRequest: Med Dosage Code"
-Description: "รหัสวิธีการใช้ยา"
-* ^url = $EX_TH_MedicationRequestDosageCode
-* ^version = "4.3.0"
-* ^status = #draft
-* ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
-* ^context.type = #element
-* ^context.expression = "MedicationRequest.dosageInstruction"
-* . 0..*
-* . ^short = "รหัสวิธีการใช้ยา"
-* . ^definition = "รหัสวิธีการใช้ยา"
-* url = $EX_TH_MedicationRequestDosageCode (exactly)
-* value[x] 1..
-* value[x] only string
 

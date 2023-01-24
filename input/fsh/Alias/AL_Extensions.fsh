@@ -31,6 +31,10 @@ Alias: $EX_TH_PatientForeignerType = https://fhir-ig.sil-th.org/extensions/Struc
 Alias: $EX_TH_PatientPidRemoveReason = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-patient-pid-remove-reason
 
 
+// Dosage
+Alias: $EX_TH_MedicationRequestDosageCode = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationrequest-med-dosage-code
+
+
 // Encounter
 Alias: $EX_TH_EncounterPatientLocationType = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-encounter-patient-location-type
 Alias: $EX_TH_EncounterServiceHour = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-encounter-service-hour
@@ -126,7 +130,6 @@ Alias: $EX_TH_ObservationDeviceAmount = https://fhir-ig.sil-th.org/extensions/St
 Alias: $EX_TH_MedicationRequestSource = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationrequest-medication-source
 Alias: $EX_TH_MedicationRequestNedCriteria = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationrequest-ned-criteria
 Alias: $EX_TH_MedicationRequestApprovedNo = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationrequest-med-approved-no
-Alias: $EX_TH_MedicationRequestDosageCode = https://fhir-ig.sil-th.org/extensions/StructureDefinition/ex-medicationrequest-med-dosage-code
 
 
 // MedicationDispense

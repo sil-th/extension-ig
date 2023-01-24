@@ -539,7 +539,7 @@ Description: "ราคาขายต่อหน่วย (ที่มา: �
 
 Extension: EX_CHI_ItemNetCharge
 Id: ex-claim-item-net-charge
-Title: "Claim: CHI - Item Charge"
+Title: "Claim: CHI - Item Net Charge"
 Description: "รวมราคาขาย (ที่มา: สกส. CSOP Billtran)"
 * ^url = $EX_CHI_ItemNetCharge
 * ^version = "4.3.0"
@@ -565,7 +565,7 @@ Description: "รวมราคาขาย (ที่มา: สกส. CSOP B
 
 Extension: EX_CHI_ClaimCondition
 Id: ex-chi-claim-condition
-Title: "Claim: CHI - Item Charge"
+Title: "Claim: CHI - Item Claim Condition"
 Description: "เงื่อนไขกำกับการเบิก (ที่มา: สกส. CSOP Billtran)"
 * ^url = $EX_CHI_ClaimCondition
 * ^version = "4.3.0"

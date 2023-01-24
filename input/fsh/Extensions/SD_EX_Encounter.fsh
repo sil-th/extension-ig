@@ -121,11 +121,11 @@ Description: "รหัสสถานะผู้มารับบริกา
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   thccService 0..1 MS and
-  thccChronic 0..1 MS
-* valueCodeableConcept.coding[thccService] from $VS_THCC_DischargeStatus (required)
-* valueCodeableConcept.coding[thccChronic] from $VS_THCC_ChronicDischargeReason (required)
-
-
+  thccChronic 0..1 MS and
+  chiTypeOut 0..1 MS
+* valueCodeableConcept.coding[thccService] from $VS_THCC_DischargeStatus (extensible)
+* valueCodeableConcept.coding[thccChronic] from $VS_THCC_ChronicDischargeReason (extensible)
+* valueCodeableConcept.coding[chiTypeOut] from $VS_CHI_TypeOut (extensible)
 
 
 Extension: EX_TH_EncounterDischargeInstruction
@@ -319,8 +319,14 @@ Description: "รหัสประเภทสถานพยาบาลที
 * url = $EX_TH_EncounterProviderType (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
-* value[x] from $VS_eClaim_ProviderType (extensible)
-
+* valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
+* valueCodeableConcept.coding ^slicing.rules = #open
+* valueCodeableConcept.coding contains
+  eclaim 0..1 MS and
+  chi 0..1 MS
+* valueCodeableConcept.coding[eclaim] from $VS_eClaim_ProviderType (extensible)
+* valueCodeableConcept.coding[chi] from $VS_CHI_ProviderType (extensible)
 
 
 
