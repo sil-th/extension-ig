@@ -615,7 +615,7 @@ Description: "วันที่และเวลาที่ ได้ AuthCod
 Extension: EX_CHI_ProjectCode
 Id: ex-chi-project-code
 Title: "Claim: CHI - Project Code"
-Description: "รหัสเบิกโครงการพิเศษหรือเฉพาะกิจ (ที่มา: สกส. CIPN ClaimAuth)"
+Description: "รหัสเบิกโครงการพิเศษหรือเฉพาะกิจ (ที่มา: สกส. CIPN ClaimAuth, SSI IPADT)"
 * ^url = $EX_CHI_ProjectCode
 * ^version = "4.3.0"
 * ^status = #draft
@@ -625,11 +625,33 @@ Description: "รหัสเบิกโครงการพิเศษหร
 * ^context[0].type = #element
 * ^context[=].expression = "Claim"
 * . 0..*
-* . ^short = "รหัสเบิกโครงการพิเศษหรือเฉพาะกิจ (ที่มา: สกส. CIPN ClaimAuth)"
+* . ^short = "รหัสเบิกโครงการพิเศษหรือเฉพาะกิจ (ที่มา: สกส. CIPN ClaimAuth, SSI IPADT)"
 * . ^definition = "รหัสเบิกโครงการพิเศษหรือเฉพาะกิจ"
 * url = $EX_CHI_ProjectCode (exactly)
 * value[x] 1..
 * value[x] only string
+
+
+
+Extension: EX_CHI_EventCode
+Id: ex-chi-event-code
+Title: "Claim: CHI - Event Code"
+Description: "รหัสเบิกเหตุการณ์พิเศษหรือเฉพาะกิจ (ที่มา: สกส. CIPN ClaimAuth, SSI IPADT)"
+* ^url = $EX_CHI_EventCode
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2023-01-17T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "Claim"
+* . 0..*
+* . ^short = "รหัสเบิกเหตุการณ์พิเศษหรือเฉพาะกิจ (ที่มา: สกส. CIPN ClaimAuth, SSI IPADT)"
+* . ^definition = "รหัสเบิกเหตุการณ์พิเศษหรือเฉพาะกิจ"
+* url = $EX_CHI_EventCode (exactly)
+* value[x] 1..
+* value[x] only string
+
 
 
 

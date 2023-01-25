@@ -176,15 +176,17 @@ Description: "รหัสระดับความเร่งด่วน"
 Extension: EX_TH_ServiceRequestReferPriorityReason
 Id: ex-servicerequest-refer-priority-reason
 Title: "ServiceRequest: Refer Priority Reason"
-Description: "ข้อบ่งชี้/ชนิดของการส่งต่อ"
+Description: "ข้อบ่งชี้/ชนิดของการเป็นกรณีฉุกเฉิน/การส่งต่อ"
 * ^url = $EX_TH_ServiceRequestReferPriorityReason
 * ^version = "4.3.0"
 * ^status = #draft
 * ^experimental = false
 * ^date = "2022-08-23T07:06:13+11:00"
 * ^publisher = "SIL-TH"
-* ^context.type = #element
-* ^context.expression = "ServiceRequest.priority"
+* ^context[0].type = #element
+* ^context[=].expression = "ServiceRequest.priority"
+* ^context[+].type = #element
+* ^context[=].expression = "Encounter.priority"
 * . 0..*
 * . ^short = "รหัสข้อบ่งชี้ของกรณีฉุกเฉินตามเงื่อนไข"
 * . ^definition = "รหัสข้อบ่งชี้ของกรณีฉุกเฉินตามเงื่อนไข"
@@ -197,4 +199,6 @@ Description: "ข้อบ่งชี้/ชนิดของการส่�
 * valueCodeableConcept.coding contains
   eClaimReason 0..1
 * valueCodeableConcept.coding[eClaimReason] from $VS_eClaim_ReferPriorityCode (required)
+
+
 

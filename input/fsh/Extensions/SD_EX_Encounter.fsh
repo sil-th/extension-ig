@@ -372,3 +372,73 @@ Description: "รหัสประเภทการรับ admit"
 * value[x] from $VS_CHI_AdmitType (extensible)
 
 
+
+
+Extension: EX_CHI_EncounterAccidentOrEmer
+Id: ex-chi-encounter-accident-emer
+Title: "Encounter: CHI - Accident or Emergency"
+Description: "รหัสระบุเป็นการรักษากรณีอุบัติเหตุและ/หรือฉุกเฉิน"
+* ^url = $EX_CHI_EncounterAccidentOrEmer
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2022-08-23T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context.type = #element
+* ^context.expression = "Encounter"
+* . 0..*
+* . ^short = "รหัสระบุเป็นการรักษากรณีอุบัติเหตุและ/หรือฉุกเฉิน"
+* . ^definition = "รหัสระบุเป็นการรักษากรณีอุบัติเหตุและ/หรือฉุกเฉิน"
+* url = $EX_CHI_EncounterAccidentOrEmer (exactly)
+* value[x] 1..
+* value[x] only CodeableConcept
+* value[x] from $VS_CHI_AccidentOrEmer (extensible)
+
+
+Extension: EX_CHI_EncounterAccidentCoverage
+Id: ex-chi-encounter-accident-coverage
+Title: "Encounter: CHI - Accident Coverage"
+Description: "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
+* ^url = $EX_CHI_EncounterAccidentCoverage
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2022-08-23T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context.type = #element
+* ^context.expression = "Encounter"
+* . 0..*
+* . ^short = "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
+* . ^definition = "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
+* url = $EX_CHI_EncounterAccidentCoverage (exactly)
+* value[x] 1..
+* value[x] only CodeableConcept
+* value[x] from $VS_eClaim_AccidentCoverage (extensible)
+
+
+Extension: EX_CHI_EncounterReferPurpose
+Id: ex-encounter-refer-purpose
+Title: "Encounter: CHI - Refer Purpose"
+Description: "สาเหตุที่ส่งต่อผู้ป่วย"
+* ^url = $EX_CHI_EncounterReferPurpose
+* ^version = "4.3.0"
+* ^status = #draft
+* ^experimental = false
+* ^date = "2022-08-23T07:06:13+11:00"
+* ^publisher = "SIL-TH"
+* ^context[0].type = #element
+* ^context[=].expression = "ServiceRequest"
+* ^context[+].type = #element
+* ^context[=].expression = "Encounter"
+* . 0..*
+* . ^short = "รหัสสาเหตุที่ส่งต่อผู้ป่วย"
+* . ^definition = "รหัสสาเหตุที่ส่งต่อผู้ป่วย"
+* url = $EX_CHI_EncounterReferPurpose (exactly)
+* value[x] 1..
+* value[x] only CodeableConcept
+* valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
+* valueCodeableConcept.coding ^slicing.rules = #open
+* valueCodeableConcept.coding contains
+  chi 0..1
+* valueCodeableConcept.coding[chi] from $VS_CHI_ReferPurpose (required)

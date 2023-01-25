@@ -29,8 +29,10 @@ Description: "รหัสสิทธิการรักษาอื่นก
 * ^experimental = false
 * ^date = "2022-08-23T07:06:13+11:00"
 * ^publisher = "SIL-TH"
-* ^context.type = #element
-* ^context.expression = "Account"
+* ^context[0].type = #element
+* ^context[=].expression = "Account"
+* ^context[+].type = #element
+* ^context[=].expression = "Encounter"
 * . 0..*
 * . ^short = "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
 * . ^definition = "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
