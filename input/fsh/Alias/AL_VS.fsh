@@ -131,6 +131,7 @@ Alias: $VS_eClaim_ServiceTypeTH = https://terms.sil-th.org/ValueSet/vs-eclaim-se
 Alias: $VS_Meta_IpdJourney = https://terms.sil-th.org/ValueSet/vs-meta-ipd-journey
 Alias: $VS_Meta_ExtendedHL7DiagnosisRole = https://terms.sil-th.org/ValueSet/vs-meta-extended-hl7-diagnosis-role
 Alias: $VS_43Plus_EncounterDiagnosisRole = https://terms.sil-th.org/ValueSet/vs-43plus-encounter-diagnosis-role
+Alias: $VS_eClaim_Clinic = https://terms.sil-th.org/ValueSet/vs-eclaim-clinic
 
 // Discharge
 Alias: $VS_THCC_DischargeStatus = https://terms.sil-th.org/ValueSet/vs-thcc-discharge-status
@@ -262,7 +263,7 @@ Alias: $VS_CHI_TypeIn = https://terms.sil-th.org/ValueSet/vs-chi-typein
 Alias: $VS_CHI_TypeOut = https://terms.sil-th.org/ValueSet/vs-chi-typeout
 Alias: $VS_CHI_Clinic = https://terms.sil-th.org/ValueSet/vs-chi-clinic
 Alias: $VS_CHI_IpServiceType = https://terms.sil-th.org/ValueSet/vs-chi-ip-service-type
-Alias: $VS_CHI_AdmitType = https://terms.sil-th.org/ValueSet/cs-chi-admit-type
+Alias: $VS_CHI_AdmitType = https://terms.sil-th.org/ValueSet/vs-chi-admit-type
 Alias: $VS_CHI_AdmitSource = https://terms.sil-th.org/ValueSet/vs-chi-admit-source
 Alias: $VS_CHI_ItemClaimCat = https://terms.sil-th.org/ValueSet/vs-chi-item-claim-cat
 Alias: $VS_CHI_CoinsuranceCat = https://terms.sil-th.org/ValueSet/vs-chi-claim-coinsurance-cat
