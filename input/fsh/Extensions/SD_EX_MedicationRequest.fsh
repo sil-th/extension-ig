@@ -24,16 +24,18 @@ Description: "ที่มาของยา"
 
 Extension: EX_TH_MedicationRequestNedCriteria
 Id: ex-medicationrequest-ned-criteria
-Title: "MedicationRequest: Out of NLEM Reason"
-Description: "เหตุผลประกอบการสั่งใช้ยานอกบัญชียาหลักแห่งชาติ (Non-essential drug Prescription Criteria)"
+Title: "MedicationRequest: Non-essential Drug Prescription Criteria"
+Description: "เหตุผลประกอบการสั่งใช้ยานอกบัญชียาหลักแห่งชาติ (Non-essential Drug Prescription Criteria)"
 * ^url = $EX_TH_MedicationRequestNedCriteria
 * ^version = "4.3.0"
 * ^status = #draft
 * ^experimental = false
 * ^date = "2022-08-23T07:06:13+11:00"
 * ^publisher = "SIL-TH"
-* ^context.type = #element
-* ^context.expression = "MedicationRequest"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationRequest"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationDispense"
 * . 0..*
 * . ^short = "เหตุผลประกอบการสั่งใช้ยานอกบัญชียาหลักแห่งชาติ (Non-essential drug Prescription Criteria)"
 * . ^definition = "เหตุผลประกอบการสั่งใช้ยานอกบัญชียาหลักแห่งชาติ (Non-essential drug Prescription Criteria)"
@@ -56,8 +58,10 @@ Description: "เลขที่ได้รับการอนุมัติ
 * ^experimental = false
 * ^date = "2022-08-23T07:06:13+11:00"
 * ^publisher = "SIL-TH"
-* ^context.type = #element
-* ^context.expression = "MedicationRequest"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationRequest"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationDispense"
 * . 0..*
 * . ^short = "เลขที่ได้รับการอนุมัติ จากระบบขออนุมัติใช้ยาควบคุมเฉพาะ"
 * . ^definition = "เลขที่ได้รับการอนุมัติ จากระบบขออนุมัติใช้ยาควบคุมเฉพาะ"
