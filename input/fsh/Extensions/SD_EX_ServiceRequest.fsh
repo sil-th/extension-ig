@@ -22,6 +22,7 @@ Description: "รหัสประเภทผู้ป่วยสำหรั
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   43file 0..1 MS and
+  chi 0..1 MS and
   eclaim 0..1 MS
 * valueCodeableConcept.coding[43file] from $VS_43File_ReferEncounterClass (required)
 * valueCodeableConcept.coding[eclaim] from $VS_eClaim_ReferTypeEclaim (required)

@@ -440,5 +440,7 @@ Description: "สาเหตุที่ส่งต่อผู้ป่วย
 * valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
-  chi 0..1
+  chi 0..1 and
+  eclaim 0..1
 * valueCodeableConcept.coding[chi] from $VS_CHI_ReferPurpose (required)
+* valueCodeableConcept.coding[eclaim] from $VS_eClaim_ReferReason (required)

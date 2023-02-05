@@ -33,6 +33,8 @@ Description: "รหัสสิทธิการรักษาอื่นก
 * ^context[=].expression = "Account"
 * ^context[+].type = #element
 * ^context[=].expression = "Encounter"
+* ^context[+].type = #element
+* ^context[=].expression = "ServiceRequest"
 * . 0..*
 * . ^short = "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
 * . ^definition = "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
