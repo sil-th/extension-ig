@@ -24,7 +24,7 @@ Description: "ที่มาของยา"
 
 Extension: EX_TH_MedicationRequestNedCriteria
 Id: ex-medicationrequest-ned-criteria
-Title: "MedicationRequest: Non-essential Drug Prescription Criteria"
+Title: "MedicationModule: Non-essential Drug Prescription Criteria"
 Description: "เหตุผลประกอบการสั่งใช้ยานอกบัญชียาหลักแห่งชาติ (Non-essential Drug Prescription Criteria)"
 * ^url = $EX_TH_MedicationRequestNedCriteria
 * ^version = "4.3.0"

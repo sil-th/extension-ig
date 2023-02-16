@@ -199,7 +199,7 @@ Description: "ลักษณะของที่อยู่"
 
 Extension: EX_TH_MedicationRequestDosageCode
 Id: ex-medicationrequest-med-dosage-code
-Title: "MedicationRequest: Med Dosage Code"
+Title: "Dosage: Medication Sig Code"
 Description: "รหัสวิธีการใช้ยา"
 * ^url = $EX_TH_MedicationRequestDosageCode
 * ^version = "4.3.0"

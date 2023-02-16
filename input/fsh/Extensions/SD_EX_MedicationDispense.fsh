@@ -62,4 +62,4 @@ Description: "ขนาดบรรจุ (ที่มา: สกส. CSOP Bill
 * . ^definition = "ขนาดบรรจุ"
 * url = $EX_CHI_PackSize (exactly)
 * value[x] 1..
-* value[x] only integer
+* value[x] only string
