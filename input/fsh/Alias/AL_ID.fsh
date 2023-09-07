@@ -17,6 +17,8 @@ Alias: $ID_ThaiNurse = https://terms.sil-th.org/id/th-nurse-id
 Alias: $ID_ThaiDisability = https://terms.sil-th.org/id/th-disability-no
 Alias: $ID_ThaihealthVolunteer = https://terms.sil-th.org/id/th-hvolunteer
 Alias: $ID_NhsoClaimCode = https://terms.sil-th.org/id/th-nhso-claim-code
+Alias: $ID_ReferCode = https://terms.sil-th.org/id/th-refer-code
+Alias: $ID_Passport = https://terms.sil-th.org/id/passport
 
 // Local identifier system for each provider
 Alias: $ID_LO_HN = https://terms.sil-th.org/hcode/5/99999/HN
@@ -41,4 +43,3 @@ Alias: $ID_LO_ReferDocument =  https://terms.sil-th.org/hcode/5/99999/ReferDoc
 
 // This project identifier system
 Alias: $ID_documentId = https://terms.sil-th.org/documenId
-

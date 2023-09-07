@@ -656,7 +656,7 @@ Description: "รหัสเบิกเหตุการณ์พิเศษ
 
 
 Extension: EX_CHI_TotalDiscount
-Id: ex-claim-total-discount
+Id: ex-chi-claim-total-discount
 Title: "Claim: CHI - Total Discount"
 Description: "ส่วนลดทั้งหมดนอกส่วนลดในรายการ BillItems (ที่มา: สกส. CIPN Invoices)"
 * ^url = $EX_CHI_TotalDiscount

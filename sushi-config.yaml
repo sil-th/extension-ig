@@ -4,12 +4,14 @@
 # │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: silth.fhir.th.extensions
-canonical: https://fhir-ig.sil-th.org/extensions
+canonical: https://fhir-ig.sil-th.org/th/extensions
 version: 0.1.0
 name: SilTHExtensions
-title: (Draft) SIL-TH FHIR Extension Library
-status: draft
-publisher: Standards and Interoperability Lab - Thailand (SIL-TH)
+title: SIL-TH FHIR Extension Library (STU1)
+status: active
+publisher:
+  name: Standards and Interoperability Lab - Thailand (SIL-TH)
+  url: https://www.sil-th.org
 # contact:
 #   - name: Bill Cod
 #     telecom:
@@ -20,16 +22,16 @@ description: An extension registry which an be cited by FHIR artifacts
 license: CC0-1.0
 fhirVersion: 4.3.0
 dependencies:
-  sil-th.terms.core: dev
-  hl7.fhir.uv.ips: 1.0.0
+  silth.fhir.terminology.core: 0.1.1
+  hl7.fhir.uv.ips: 1.1.0
 parameters:
   apply-publisher: true
   apply-contact: true
   show-inherited-invariants: false
   excludettl: true
   excludemap: true
-copyrightYear: 2022+
-releaseLabel: draft
+copyrightYear: 2023+
+releaseLabel: trial-use
 
 pages:
   index.md:
