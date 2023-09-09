@@ -23,6 +23,7 @@ license: CC0-1.0
 fhirVersion: 4.3.0
 dependencies:
   silth.fhir.terminology.core: 0.1.1
+  silth.fhir.th.extensions: 0.1.0
   hl7.fhir.uv.ips: 1.1.0
 parameters:
   apply-publisher: true

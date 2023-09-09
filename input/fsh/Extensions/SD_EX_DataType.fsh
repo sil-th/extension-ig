@@ -54,27 +54,27 @@ Description: "รหัสที่อยู่ ตามกรมการป�
 * . ^definition = "รหัสที่อยู่ ตามกรมการปกครอง"
 * url = $EX_TH_AddressDopaCode (exactly)
 * extension contains
-    changwat 0..1 and
-    amphur 0..1 and
-    tumbol 0..1
-* extension[changwat] only Extension
-* extension[changwat] ^short = "จังหวัด"
-* extension[changwat] ^definition = "จังหวัด"
-  * url = "changwat" (exactly)
+    province 0..1 and
+    district 0..1 and
+    subdistrict 0..1
+* extension[province] only Extension
+* extension[province] ^short = "จังหวัด"
+* extension[province] ^definition = "จังหวัด"
+  * url = "province" (exactly)
   * value[x] 1..
   * value[x] only CodeableConcept
   * value[x] from $VS_DOPA_Location_City (extensible)
-* extension[amphur] only Extension
-* extension[amphur] ^short = "อำเภอ"
-* extension[amphur] ^definition = "อำเภอ"
-  * url = "amphur" (exactly)
+* extension[district] only Extension
+* extension[district] ^short = "อำเภอ"
+* extension[district] ^definition = "อำเภอ"
+  * url = "district" (exactly)
   * value[x] 1..
   * value[x] only CodeableConcept
   * value[x] from $VS_DOPA_Location_District (extensible)
-* extension[tumbol] only Extension
-* extension[tumbol] ^short = "ตำบล"
-* extension[tumbol] ^definition = "ตำบล"
-  * url = "tumbol" (exactly)
+* extension[subdistrict] only Extension
+* extension[subdistrict] ^short = "ตำบล"
+* extension[subdistrict] ^definition = "ตำบล"
+  * url = "subdistrict" (exactly)
   * value[x] 1..
   * value[x] only CodeableConcept
   * value[x] from $VS_DOPA_Location_Subdistrict (extensible)
