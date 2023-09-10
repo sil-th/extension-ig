@@ -5,9 +5,9 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: silth.fhir.th.extensions
 canonical: https://fhir-ig.sil-th.org/th/extensions
-version: 0.1.0
+version: 1.0.0
 name: SilTHExtensions
-title: SIL-TH FHIR Extension Library (STU1)
+title: SIL-TH FHIR Extension Library (STU2)
 status: active
 publisher:
   name: Standards and Interoperability Lab - Thailand (SIL-TH)
@@ -17,17 +17,13 @@ publisher:
 #     telecom:
 #       - system: email
 #         value: cod@reef.gov
-jurisdiction: "urn:iso:std:iso:3166#TH"
 description: An extension registry which an be cited by FHIR artifacts
 license: CC0-1.0
-fhirVersion: 4.3.0
+fhirVersion: 5.0.0
 dependencies:
   silth.fhir.terminology.core: 0.1.1
-  silth.fhir.th.extensions: 0.1.0
   hl7.fhir.uv.ips: 1.1.0
 parameters:
-  apply-publisher: true
-  apply-contact: true
   show-inherited-invariants: false
   excludettl: true
   excludemap: true

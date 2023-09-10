@@ -2,7 +2,6 @@
 
 // * prefix = "นาย"
 //   * extension
-//     * url = $EX_TH_HumanNamePrefixCode
 //     * valueCodeableConcept
 //       * coding[0] = $CS_DOPA_NamePrefix#003 "นาย"
 //       * text = "นาย"
@@ -11,17 +10,12 @@ Id: ex-humanname-name-prefix
 Title: "HumanName: Name Prefix Code"
 Description: "รหัสคำนำหน้าชื่อ"
 * ^url = $EX_TH_HumanNamePrefixCode
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "HumanName.prefix"
-* . 0..*
 * . ^short = "รหัสคำนำหน้าชื่อ"
 * . ^definition = "รหัสคำนำหน้าชื่อ"
-* url = $EX_TH_HumanNamePrefixCode (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_DOPA_NamePrefix (extensible)
@@ -33,7 +27,6 @@ Description: "รหัสคำนำหน้าชื่อ"
 // Address
 
 // * extension[0]
-//   * url = $EX_TH_AddressDopaCode
 //   * valueCodeableConcept = $CS_DOPA_Location#120102 "จังหวัดนนทบุรี อำเภอเมืองนนทบุรี ตำบลตลาดขวัญ"
 // Alias: $EX_TH_AddressDopaCode = https://fhir-ig.sil-th.org/mophpc/Extension/TH-address-code
 
@@ -42,17 +35,12 @@ Id: ex-address-address-code
 Title: "Address: DOPA address code"
 Description: "รหัสที่อยู่ ตามกรมการปกครอง"
 * ^url = $EX_TH_AddressDopaCode
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Address"
-* . 0..*
 * . ^short = "รหัสที่อยู่ ตามกรมการปกครอง"
 * . ^definition = "รหัสที่อยู่ ตามกรมการปกครอง"
-* url = $EX_TH_AddressDopaCode (exactly)
 * extension contains
     province 0..1 and
     district 0..1 and
@@ -85,17 +73,12 @@ Id: ex-address-structured-line
 Title: "Address: Structured Address Line"
 Description: "ที่อยู่ แบบแยกเป็นรายละเอียดข้อมูลย่อย"
 * ^url = $EX_TH_AddressStructuredLine
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Address"
-* . 0..*
 * . ^short = "ที่อยู่ แบบแยกเป็นรายละเอียดข้อมูลย่อย"
 * . ^definition = "ที่อยู่ แบบแยกเป็นรายละเอียดข้อมูลย่อย"
-* url = $EX_TH_AddressStructuredLine (exactly)
 * extension contains
     number 0..1 and
     buildingVillage 0..1 and
@@ -141,7 +124,7 @@ Description: "ที่อยู่ แบบแยกเป็นรายล�
 
 
   // * extension[+]
-  //   * url = $EX_TH_AddressHomeReference
+
   //   * valueReference = Reference(location-Address1-home1)
   //     * insert GeneralReference($ID_DopaHouseNo, "XXXXXXXXXXX", "123 คอนโดพัฒนานนท์")
 // Alias: $EX_TH_AddressHomeReference = https://fhir-ig.sil-th.org/mophpc/Extension/TH-home-reference
@@ -150,17 +133,12 @@ Id: ex-address-home-reference
 Title: "Address: Reference to Home"
 Description: "การอ้างอิง Location resource"
 * ^url = $EX_TH_AddressHomeReference
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Address"
-* . 0..*
 * . ^short = "ระดับการศึกษา"
 * . ^definition = "ระดับการศึกษา"
-* url = $EX_TH_AddressHomeReference (exactly)
 * value[x] 1..
 * value[x] only Reference(Location)
 
@@ -168,7 +146,7 @@ Description: "การอ้างอิง Location resource"
 
 
   // * extension[+]
-  //   * url = $EX_TH_AddressHouseType
+
   //   * valueCodeableConcept = $CS_THCC_HouseType#3 "คอนโดมิเนียม"
 // Alias: $EX_TH_AddressHouseType = https://fhir-ig.sil-th.org/mophpc/Extension/TH-house-type
 
@@ -177,16 +155,12 @@ Id: ex-address-house-type
 Title: "Address: House Type"
 Description: "ลักษณะของที่อยู่"
 * ^url = $EX_TH_AddressHouseType
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context[0].type = #element
 * ^context[=].expression = "Address"
 * ^context[+].type = #element
 * ^context[=].expression = "Location"
-* . 0..*
 * . ^short = "ลักษณะของที่อยู่"
 * . ^definition = "ลักษณะของที่อยู่"
 * value[x] 1..
@@ -202,17 +176,12 @@ Id: ex-medicationrequest-med-dosage-code
 Title: "Dosage: Medication Sig Code"
 Description: "รหัสวิธีการใช้ยา"
 * ^url = $EX_TH_MedicationRequestDosageCode
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Dosage"
-* . 0..*
 * . ^short = "รหัสวิธีการใช้ยา"
 * . ^definition = "รหัสวิธีการใช้ยา"
-* url = $EX_TH_MedicationRequestDosageCode (exactly)
 * value[x] 1..
 * value[x] only string
 

@@ -7,17 +7,12 @@ Id: ex-devicerequest-use-location
 Title: "DeviceRequest: Product Use Location"
 Description: "รหัสหมวดสถานที่ใช้ยา/เวชภัณฑ์"
 * ^url = $EX_TH_DeviceRequestUseLocation
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "DeviceRequest"
-* . 0..*
 * . ^short = "รหัสหมวดสถานที่ใช้ยา/เวชภัณฑ์"
 * . ^definition = "รหัสหมวดสถานที่ใช้ยา/เวชภัณฑ์"
-* url = $EX_TH_DeviceRequestUseLocation (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_eClaim_MedicationCategory (extensible)

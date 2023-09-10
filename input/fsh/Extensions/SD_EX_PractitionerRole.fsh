@@ -1,6 +1,5 @@
 // Alias: $EX_TH_PractitionerRoleProviderMovement = https://fhir-ig.sil-th.org/mophpc/Extension/TH-provider-move
 // * extension[0]
-//   * url = $EX_TH_PractitionerRoleProviderMovement
 //   * extension[0]
 //     * url = "movefrom"
 //     * valueReference = Reference(Organization/organization-second) "โรงพยาบาลสำรอง"
@@ -17,17 +16,12 @@ Id: ex-practitionerrole-provider-move
 Title: "PractitionerRole: Provider Movement"
 Description: "ข้อมูลการย้ายสถานพยาบาล"
 * ^url = $EX_TH_PractitionerRoleProviderMovement
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "PractitionerRole"
-* . 0..*
 * . ^short = "ข้อมูลการย้ายสถานพยาบาล"
 * . ^definition = "ข้อมูลการย้ายสถานพยาบาล"
-* url = $EX_TH_PractitionerRoleProviderMovement (exactly)
 * extension contains
     movefrom 0..1 and
     period 0..1 and

@@ -4,17 +4,12 @@ Id: ex-servicerequest-refer-patient-category
 Title: "ServiceRequest: Refer Patient Category"
 Description: "รหัสประเภทผู้ป่วยสำหรับการส่งต่อ"
 * ^url = $EX_TH_ServiceRequestReferPatientCatagory
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "ServiceRequest"
-* . 0..*
 * . ^short = "รหัสประเภทผู้ป่วยสำหรับการส่งต่อ"
 * . ^definition = "รหัสประเภทผู้ป่วยสำหรับการส่งต่อ"
-* url = $EX_TH_ServiceRequestReferPatientCatagory (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
@@ -39,17 +34,12 @@ Id: ex-servicerequest-refer-status
 Title: "ServiceRequest: Refer Status"
 Description: "รหัสสถานะหรือผลการส่งต่อผู้ป่วย"
 * ^url = $EX_TH_ServiceRequestReferStatus
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "ServiceRequest"
-* . 0..*
 * . ^short = "รหัสสถานะหรือผลการส่งต่อผู้ป่วย"
 * . ^definition = "รหัสสถานะหรือผลการส่งต่อผู้ป่วย"
-* url = $EX_TH_ServiceRequestReferStatus (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
@@ -72,17 +62,12 @@ Id: ex-servicerequest-refer-result-reason
 Title: "ServiceRequest: Refer Result Reason"
 Description: "ใช้ในกรณีต้องการอธิบายเหตุผลที่ไม่สามารถรับผู้ป่วยไว้รักษาต่อได้"
 * ^url = $EX_TH_ServiceRequestReferResultReason
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "ServiceRequest"
-* . 0..*
 * . ^short = "เหตุผลที่ไม่สามารถรับผู้ป่วยไว้รักษาต่อได้"
 * . ^definition = "ใช้ในกรณีต้องการอธิบายเหตุผลที่ไม่สามารถรับผู้ป่วยไว้รักษาต่อได้"
-* url = $EX_TH_ServiceRequestReferResultReason (exactly)
 * value[x] 1..
 * value[x] only string
 
@@ -93,17 +78,12 @@ Id: ex-servicerequest-refer-requester-detail
 Title: "ServiceRequest: Refer Requester Detail"
 Description: "สถานพยาบาล และแผนกที่ส่งต่อผู้ป่วย (ต้นทาง)"
 * ^url = $EX_TH_ServiceRequestReferRequesterDetail
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "ServiceRequest"
-* . 0..*
 * . ^short = "สถานพยาบาล และแผนกที่ส่งต่อผู้ป่วย (ต้นทาง)"
 * . ^definition = "สถานพยาบาล และแผนกที่ส่งต่อผู้ป่วย (ต้นทาง)"
-* url = $EX_TH_ServiceRequestReferRequesterDetail (exactly)
 * extension contains
     organization 0..1 and
     department 0..1
@@ -127,17 +107,12 @@ Id: ex-servicerequest-refer-requested-period
 Title: "ServiceRequest: Refer Requested Period"
 Description: "วันที่กำหนดสิ้นสุดการตอบรับ หรือปฎิเสธ"
 * ^url = $EX_TH_ServiceRequestReferRequestedPeriod
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "ServiceRequest"
-* . 0..*
 * . ^short = "วันที่กำหนดสิ้นสุดการตอบรับ หรือปฎิเสธ"
 * . ^definition = "วันที่กำหนดสิ้นสุดการตอบรับ หรือปฎิเสธ"
-* url = $EX_TH_ServiceRequestReferRequestedPeriod (exactly)
 * value[x] 1..
 * value[x] only Period
 
@@ -148,17 +123,12 @@ Id: ex-servicerequest-thai-refer-priority
 Title: "ServiceRequest: Thai Refer Priority"
 Description: "รหัสระดับความเร่งด่วน"
 * ^url = $EX_TH_ServiceRequestThaiReferPriority
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "ServiceRequest.priority"
-* . 0..*
 * . ^short = "รหัสระดับความเร่งด่วน"
 * . ^definition = "รหัสระดับความเร่งด่วน"
-* url = $EX_TH_ServiceRequestThaiReferPriority (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
@@ -179,19 +149,14 @@ Id: ex-servicerequest-refer-priority-reason
 Title: "ServiceRequest: Refer Priority Reason"
 Description: "ข้อบ่งชี้/ชนิดของการเป็นกรณีฉุกเฉิน/การส่งต่อ"
 * ^url = $EX_TH_ServiceRequestReferPriorityReason
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context[0].type = #element
 * ^context[=].expression = "ServiceRequest.priority"
 * ^context[+].type = #element
 * ^context[=].expression = "Encounter.priority"
-* . 0..*
 * . ^short = "รหัสข้อบ่งชี้ของกรณีฉุกเฉินตามเงื่อนไข"
 * . ^definition = "รหัสข้อบ่งชี้ของกรณีฉุกเฉินตามเงื่อนไข"
-* url = $EX_TH_ServiceRequestReferPriorityReason (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern

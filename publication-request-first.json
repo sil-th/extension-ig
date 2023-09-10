@@ -1,0 +1,16 @@
+{
+  "package-id": "silth.fhir.th.extensions",
+  "version": "1.0.0",
+  "path": "https://fhir-ig.sil-th.org/th/extensions/1.0.0",
+  "mode": "working",
+  "status": "trial-use",
+  "sequence": "STU2",
+  "desc": "Initial publication of the SIL-TH extensions.",
+  "descmd": "Initial publication of the SIL-TH extensions.",
+  "changes": "change_log.html",
+  "first": true,
+  "title": "SIL-TH FHIR Extension Library (STU2)",
+  "ci-build": "https://fhir-ig.sil-th.org/th/extensions/",
+  "category": "Extensions",
+  "introduction": "An extension registry which an be cited by FHIR artifacts from SIL-TH"
+}

@@ -1,6 +1,5 @@
 // Alias: $EX_TH_CoverageContractedProvider = https://fhir-ig.sil-th.org/mophpc/Extension/TH-provider-type-coverage
 // * extension[+]
-//   * url = $EX_TH_CoverageContractedProvider
 //   * extension[0]
 //     * url = "type"
 //     * valueCodeableConcept
@@ -16,17 +15,12 @@ Id: ex-coverage-contracted-provider
 Title: "Coverage: Contracted Provider"
 Description: "สถานพยาบาลคู่สัญญา"
 * ^url = $EX_TH_CoverageContractedProvider
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Coverage"
-* . 0..*
 * . ^short = "สถานพยาบาลคู่สัญญา"
 * . ^definition = "สถานพยาบาลคู่สัญญา"
-* url = $EX_TH_CoverageContractedProvider (exactly)
 * extension contains
     type 0..1 and
     provider 0..1 and

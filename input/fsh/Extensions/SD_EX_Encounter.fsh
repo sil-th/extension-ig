@@ -3,17 +3,12 @@ Id: ex-encounter-patient-location-type
 Title: "Encounter: Patient Location Type"
 Description: "รหัสที่ตั้งของที่อยู่ผู้รับบริการ"
 * ^url = $EX_TH_EncounterPatientLocationType
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.subject"
-* . 0..*
 * . ^short = "รหัสที่ตั้งของที่อยู่ผู้รับบริการ"
 * . ^definition = "รหัสที่ตั้งของที่อยู่ผู้รับบริการ"
-* url = $EX_TH_EncounterPatientLocationType (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_THCC_PatientLocationType (extensible)
@@ -28,17 +23,12 @@ Id: ex-encounter-service-hour
 Title: "Encounter: Service Hour"
 Description: "รหัสเวลามารับบริการ"
 * ^url = $EX_TH_EncounterServiceHour
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.period"
-* . 0..*
 * . ^short = "รหัสเวลามารับบริการ"
 * . ^definition = "รหัสเวลามารับบริการ"
-* url = $EX_TH_EncounterServiceHour (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_THCC_ServiceHour (extensible)
@@ -53,17 +43,12 @@ Id: ex-encounter-service-location-type
 Title: "Encounter: Service Location Type"
 Description: "รหัสสถานที่ที่ให้บริการ"
 * ^url = $EX_TH_EncounterServiceLocationType
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.location"
-* . 0..*
 * . ^short = "รหัสสถานที่ที่ให้บริการ"
 * . ^definition = "รหัสสถานที่ที่ให้บริการ"
-* url = $EX_TH_EncounterServiceLocationType (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_PCU_ServiceLocationType (extensible)
@@ -78,17 +63,12 @@ Id: ex-encounter-service-type-th
 Title: "Encounter: Thai Service Type"
 Description: "รหัสประเภทการให้บริการ"
 * ^url = $EX_TH_EncounterServiceTypeTH
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter"
-* . 0..*
 * . ^short = "รหัสประเภทการให้บริการ"
 * . ^definition = "รหัสประเภทการให้บริการ"
-* url = $EX_TH_EncounterServiceTypeTH (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_eClaim_ServiceTypeTH (extensible)
@@ -103,17 +83,12 @@ Id: ex-encounter-discharge-status
 Title: "Encounter: Discharge Status"
 Description: "รหัสสถานะผู้มารับบริการเมื่อเสร็จสิ้นบริการ"
 * ^url = $EX_TH_EncounterDischargeStatus
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.hospitalization"
-* . 0..*
 * . ^short = "รหัสสถานะผู้มารับบริการเมื่อเสร็จสิ้นบริการ"
 * . ^definition = "รหัสสถานะผู้มารับบริการเมื่อเสร็จสิ้นบริการ"
-* url = $EX_TH_EncounterDischargeStatus (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
@@ -133,17 +108,12 @@ Id: ex-encounter-discharge-instruction
 Title: "Encounter: Discharge Instruction"
 Description: "คำแนะนำหลังการเข้ารับบริการ"
 * ^url = $EX_TH_EncounterDischargeInstruction
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.hospitalization"
-* . 0..*
 * . ^short = "คำแนะนำหลังการเข้ารับบริการ"
 * . ^definition = "คำแนะนำหลังการเข้ารับบริการ"
-* url = $EX_TH_EncounterDischargeInstruction (exactly)
 * value[x] 1..
 * value[x] only Annotation
 
@@ -156,17 +126,12 @@ Id: ex-encounter-ipd-journey
 Title: "Encounter: IPD Journey"
 Description: "รหัสชนิดของแผนกที่ผู้ป่วยในรับบริการ"
 * ^url = $EX_TH_EncounterIpdJourney
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.location"
-* . 0..*
 * . ^short = "รหัสชนิดของแผนกที่ผู้ป่วยในรับบริการ"
 * . ^definition = "รหัสชนิดของแผนกที่ผู้ป่วยในรับบริการ"
-* url = $EX_TH_EncounterIpdJourney (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_Meta_IpdJourney (extensible)
@@ -181,17 +146,12 @@ Id: ex-encounter-ipd-discharge-status
 Title: "Encounter: IPD Discharge Status"
 Description: "รหัสสถานภาพการจำหน่ายผู้ป่วย"
 * ^url = $EX_TH_EncounterIpdDischargeStatus
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.hospitalization"
-* . 0..*
 * . ^short = "รหัสสถานภาพการจำหน่ายผู้ป่วย"
 * . ^definition = "รหัสสถานภาพการจำหน่ายผู้ป่วย"
-* url = $EX_TH_EncounterIpdDischargeStatus (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_THCC_IpdDischargeStatus (extensible)
@@ -206,17 +166,12 @@ Id: ex-encounter-ipd-discharge-type
 Title: "Encounter: IPD Discharge Type"
 Description: "รหัสชนิดการจำหน่ายผู้ป่วย"
 * ^url = $EX_TH_EncounterIpdDischargeType
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.hospitalization"
-* . 0..*
 * . ^short = "รหัสชนิดการจำหน่ายผู้ป่วย"
 * . ^definition = "รหัสชนิดการจำหน่ายผู้ป่วย"
-* url = $EX_TH_EncounterIpdDischargeType (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_THCC_IpdDischargeType (extensible)
@@ -231,17 +186,12 @@ Id: ex-encounter-fp-case-type
 Title: "Encounter: Family Planning Case Type"
 Description: "รหัสประเภทการวางแผนครอบครัว"
 * ^url = $EX_TH_EncounterFpCaseType
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter"
-* . 0..*
 * . ^short = "รหัสประเภทการวางแผนครอบครัว"
 * . ^definition = "รหัสประเภทการวางแผนครอบครัว"
-* url = $EX_TH_EncounterFpCaseType (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_PCU_FpCaseType (extensible)
@@ -258,17 +208,12 @@ Id: ex-encounter-leave-day
 Title: "Encounter: Leave Day"
 Description: "ข้อมูลกรณีที่ผู้ป่วยมีการลากลับบ้าน"
 * ^url = $EX_TH_EncounterLeaveDay
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter"
-* . 0..*
 * . ^short = "ข้อมูลกรณีที่ผู้ป่วยมีการลากลับบ้าน"
 * . ^definition = "ข้อมูลกรณีที่ผู้ป่วยมีการลากลับบ้าน"
-* url = $EX_TH_EncounterLeaveDay (exactly)
 * extension contains
     id 0..1 and
     leaveDate 0..1 and
@@ -306,17 +251,12 @@ Id: ex-encounter-provider-type
 Title: "Encounter: Provider Type"
 Description: "รหัสประเภทสถานพยาบาลที่รักษา"
 * ^url = $EX_TH_EncounterProviderType
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.serviceProvider"
-* . 0..*
 * . ^short = "รหัสประเภทสถานพยาบาลที่รักษา"
 * . ^definition = "รหัสประเภทสถานพยาบาลที่รักษา"
-* url = $EX_TH_EncounterProviderType (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
@@ -335,17 +275,12 @@ Id: ex-encounter-refer-out-id
 Title: "Encounter: Refer Out ID"
 Description: "เลขที่ใบส่งตัว"
 * ^url = $EX_TH_EncounterReferOutID
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.hospitalization.destination"
-* . 0..*
 * . ^short = "เลขที่ใบส่งตัว"
 * . ^definition = "เลขที่ใบส่งตัว"
-* url = $EX_TH_EncounterReferOutID (exactly)
 * value[x] 1..
 * value[x] only Reference(ServiceRequest)
 
@@ -356,17 +291,12 @@ Id: ex-chi-encounter-admit-type
 Title: "Encounter: CHI - Admit Type"
 Description: "รหัสประเภทการรับ admit"
 * ^url = $EX_CHI_EncounterAdmitType
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter.hospitalization"
-* . 0..*
 * . ^short = "รหัสประเภทการรับ admit"
 * . ^definition = "รหัสประเภทการรับ admit"
-* url = $EX_CHI_EncounterAdmitType (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_CHI_AdmitType (extensible)
@@ -379,17 +309,12 @@ Id: ex-chi-encounter-accident-emer
 Title: "Encounter: CHI - Accident or Emergency"
 Description: "รหัสระบุเป็นการรักษากรณีอุบัติเหตุและ/หรือฉุกเฉิน"
 * ^url = $EX_CHI_EncounterAccidentOrEmer
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter"
-* . 0..*
 * . ^short = "รหัสระบุเป็นการรักษากรณีอุบัติเหตุและ/หรือฉุกเฉิน"
 * . ^definition = "รหัสระบุเป็นการรักษากรณีอุบัติเหตุและ/หรือฉุกเฉิน"
-* url = $EX_CHI_EncounterAccidentOrEmer (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_CHI_AccidentOrEmer (extensible)
@@ -400,17 +325,12 @@ Id: ex-chi-encounter-accident-coverage
 Title: "Encounter: CHI - Accident Coverage"
 Description: "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
 * ^url = $EX_CHI_EncounterAccidentCoverage
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context.type = #element
 * ^context.expression = "Encounter"
-* . 0..*
 * . ^short = "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
 * . ^definition = "รหัสสิทธิการรักษาอื่นกรณีอุบัติเหตุ"
-* url = $EX_CHI_EncounterAccidentCoverage (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * value[x] from $VS_eClaim_AccidentCoverage (extensible)
@@ -421,19 +341,14 @@ Id: ex-encounter-refer-purpose
 Title: "Encounter: CHI - Refer Purpose"
 Description: "สาเหตุที่ส่งต่อผู้ป่วย"
 * ^url = $EX_CHI_EncounterReferPurpose
-* ^version = "4.3.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
-* ^date = "2022-08-23T07:06:13+11:00"
-* ^publisher = "SIL-TH"
 * ^context[0].type = #element
 * ^context[=].expression = "ServiceRequest"
 * ^context[+].type = #element
 * ^context[=].expression = "Encounter"
-* . 0..*
 * . ^short = "รหัสสาเหตุที่ส่งต่อผู้ป่วย"
 * . ^definition = "รหัสสาเหตุที่ส่งต่อผู้ป่วย"
-* url = $EX_CHI_EncounterReferPurpose (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
