@@ -1,8 +1,8 @@
 {
   "package-id": "silth.fhir.th.extensions",
   "version": "1.0.0",
-  "path": "https://fhir-ig.sil-th.org/th/extensions/1.0.0",
-  "mode": "working",
+  "path": "https://fhir-ig.sil-th.org/th/extensions/1.0.0-snapshot'",
+  "mode": "milestone",
   "status": "trial-use",
   "sequence": "STU2",
   "desc": "Conversion of the SIL-TH extensions to R5.",

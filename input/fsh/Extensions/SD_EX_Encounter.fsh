@@ -25,8 +25,10 @@ Description: "รหัสเวลามารับบริการ"
 * ^url = $EX_TH_EncounterServiceHour
 * ^status = #active
 * ^experimental = false
-* ^context.type = #element
-* ^context.expression = "Encounter.period"
+* ^context[0].type = #element
+* ^context[=].expression = "Encounter.period"
+* ^context[+].type = #element
+* ^context[=].expression = "Encounter.actualPeriod"
 * . ^short = "รหัสเวลามารับบริการ"
 * . ^definition = "รหัสเวลามารับบริการ"
 * value[x] 1..
@@ -85,14 +87,16 @@ Description: "รหัสสถานะผู้มารับบริกา
 * ^url = $EX_TH_EncounterDischargeStatus
 * ^status = #active
 * ^experimental = false
-* ^context.type = #element
-* ^context.expression = "Encounter.hospitalization"
+* ^context[0].type = #element
+* ^context[=].expression = "Encounter.hospitalization"
+* ^context[+].type = #element
+* ^context[=].expression = "Encounter.admission"
 * . ^short = "รหัสสถานะผู้มารับบริการเมื่อเสร็จสิ้นบริการ"
 * . ^definition = "รหัสสถานะผู้มารับบริการเมื่อเสร็จสิ้นบริการ"
 * value[x] 1..
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
+* valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   thccService 0..1 MS and
@@ -110,8 +114,10 @@ Description: "คำแนะนำหลังการเข้ารับบ
 * ^url = $EX_TH_EncounterDischargeInstruction
 * ^status = #active
 * ^experimental = false
-* ^context.type = #element
-* ^context.expression = "Encounter.hospitalization"
+* ^context[0].type = #element
+* ^context[=].expression = "Encounter.hospitalization"
+* ^context[+].type = #element
+* ^context[=].expression = "Encounter.admission"
 * . ^short = "คำแนะนำหลังการเข้ารับบริการ"
 * . ^definition = "คำแนะนำหลังการเข้ารับบริการ"
 * value[x] 1..
@@ -259,8 +265,8 @@ Description: "รหัสประเภทสถานพยาบาลที
 * . ^definition = "รหัสประเภทสถานพยาบาลที่รักษา"
 * value[x] 1..
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
+* valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   eclaim 0..1 MS and
@@ -351,8 +357,8 @@ Description: "สาเหตุที่ส่งต่อผู้ป่วย
 * . ^definition = "รหัสสาเหตุที่ส่งต่อผู้ป่วย"
 * value[x] 1..
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
+* valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   chi 0..1 and

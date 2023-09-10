@@ -3,3 +3,6 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+Rule eld-24: 'pattern[x] should be used rather than fixed[x]' Failed (Best Practice Recommendation)
+The Implementation Guide contains no examples for this extension

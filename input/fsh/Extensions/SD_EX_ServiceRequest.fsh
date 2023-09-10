@@ -12,8 +12,8 @@ Description: "รหัสประเภทผู้ป่วยสำหรั
 * . ^definition = "รหัสประเภทผู้ป่วยสำหรับการส่งต่อ"
 * value[x] 1..
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
+* valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   43file 0..1 MS and
@@ -42,8 +42,8 @@ Description: "รหัสสถานะหรือผลการส่งต
 * . ^definition = "รหัสสถานะหรือผลการส่งต่อผู้ป่วย"
 * value[x] 1..
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
+* valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   43file 0..1 and
@@ -131,8 +131,8 @@ Description: "รหัสระดับความเร่งด่วน"
 * . ^definition = "รหัสระดับความเร่งด่วน"
 * value[x] 1..
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
+* valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   43file 0..1 and
@@ -159,8 +159,8 @@ Description: "ข้อบ่งชี้/ชนิดของการเป�
 * . ^definition = "รหัสข้อบ่งชี้ของกรณีฉุกเฉินตามเงื่อนไข"
 * value[x] 1..
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding ^slicing.discriminator[0].type = #pattern
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "$this"
+* valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   eClaimReason 0..1

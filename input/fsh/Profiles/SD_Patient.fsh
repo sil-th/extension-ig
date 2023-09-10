@@ -4,9 +4,8 @@ Id: ex-th-patient-nationality
 Title: "TH Patient Extension: Nationality"
 Description: "สัญชาติของผู้ป่วย"
 * ^url = $EX_TH_Patient_Nationality
-* ^status = #draft
+* ^status = #active
 * ^publisher = "Standards and Interoperability Lab - Thailand (SIL-TH)"
-* ^jurisdiction = urn:iso:std:iso:3166#TH
 * ^context.type = #element
 * ^context.expression = "Patient"
 * extension[code].valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
@@ -25,9 +24,8 @@ Id: ex-th-patient-religion
 Title: "TH Patient Extension: Religion"
 Description: "ความเชื่อทางศาสนาของผู้ป่วย"
 * ^url = $EX_TH_Patient_Religion
-* ^status = #draft
+* ^status = #active
 * ^publisher = "Standards and Interoperability Lab - Thailand (SIL-TH)"
-* ^jurisdiction = urn:iso:std:iso:3166#TH
 * ^context.type = #element
 * ^context.expression = "Patient"
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
@@ -49,9 +47,8 @@ Id: ex-th-patient-extension-disability
 Title: "TH Patient Extension: Disability"
 Description: "ประเภทความพิการ"
 * ^url = $EX_TH_Patient_Disability
-* ^status = #draft
+* ^status = #active
 * ^publisher = "Standards and Interoperability Lab - Thailand (SIL-TH)"
-* ^jurisdiction = urn:iso:std:iso:3166#TH
 * ^context.type = #element
 * ^context.expression = "Patient"
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
