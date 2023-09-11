@@ -21,7 +21,7 @@ description: An extension registry which an be cited by FHIR artifacts
 license: CC0-1.0
 fhirVersion: 5.0.0
 dependencies:
-  silth.fhir.terminology.core: 0.1.1
+  silth.fhir.terminology.core: 0.1.2
   hl7.fhir.uv.ips: 1.1.0
 parameters:
   show-inherited-invariants: false
