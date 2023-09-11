@@ -15,8 +15,9 @@ Description: "สัญชาติของผู้ป่วย"
   iso3166 0..1 MS and
   thcc 0..1 MS
 * extension[code].valueCodeableConcept.coding[iso3166] from $VS_INT_ISO3166 (extensible)
+* extension[code].valueCodeableConcept.coding[iso3166].system = $ISO3166 (exactly)
 * extension[code].valueCodeableConcept.coding[thcc] from $VS_THCC_Nationality (extensible)
-
+* extension[code].valueCodeableConcept.coding[thcc].system = $CS_THCC_Nationality (exactly)
 
 Profile: THPatientExtensionReligion
 Parent: $EX_HL7_Religion
@@ -35,7 +36,9 @@ Description: "ความเชื่อทางศาสนาของผู
     hl7 0..1 MS and
     thcc 0..1 MS
 * valueCodeableConcept.coding[hl7] from $VS_HL7_Religion (extensible)
+* valueCodeableConcept.coding[hl7].system = $CS_HL7_Religion (exactly)
 * valueCodeableConcept.coding[thcc] from $VS_THCC_Religion (extensible)
+* valueCodeableConcept.coding[thcc].system = $CS_THCC_Religion (exactly)
 
 
 
@@ -57,3 +60,4 @@ Description: "ประเภทความพิการ"
 * valueCodeableConcept.coding contains
     thcc 0..1 MS
 * valueCodeableConcept.coding[thcc] from $VS_THCC_DisabilityType (extensible)
+* valueCodeableConcept.coding[thcc].system = $CS_THCC_DisabilityType (exactly)

@@ -13,15 +13,16 @@ Description: "รหัสประเภทผู้ป่วยสำหรั
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   43file 0..1 MS and
   chi 0..1 MS and
   eclaim 0..1 MS
 * valueCodeableConcept.coding[43file] from $VS_43File_ReferEncounterClass (required)
+* valueCodeableConcept.coding[43file].system = $CS_43File_ReferEncounterClass (exactly)
 * valueCodeableConcept.coding[eclaim] from $VS_eClaim_ReferTypeEclaim (required)
-
+* valueCodeableConcept.coding[eclaim].system = $CS_eClaim_ReferTypeEclaim (exactly)
 
 
 
@@ -43,7 +44,7 @@ Description: "รหัสสถานะหรือผลการส่งต
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   43file 0..1 and
@@ -51,10 +52,13 @@ Description: "รหัสสถานะหรือผลการส่งต
   std15referStatus 0..1 and
   pcuReferOutcome 0..1
 * valueCodeableConcept.coding[43file] from $VS_43File_ReferResult (required)
+* valueCodeableConcept.coding[43file].system = $CS_43File_ReferResult (exactly)
 * valueCodeableConcept.coding[std15answer] from $VS_Std15_ReferAnswerType (required)
+* valueCodeableConcept.coding[std15answer].system = $CS_Std15_ReferAnswerType (exactly)
 * valueCodeableConcept.coding[std15referStatus] from $VS_Std15_ReferStatus (required)
+* valueCodeableConcept.coding[std15referStatus].system = $CS_Std15_ReferStatus (exactly)
 * valueCodeableConcept.coding[pcuReferOutcome] from $VS_PCU_ReferOutcome (required)
-
+* valueCodeableConcept.coding[pcuReferOutcome].system = $CS_PCU_ReferOutcome (exactly)
 
 
 Extension: EX_TH_ServiceRequestReferResultReason
@@ -132,13 +136,15 @@ Description: "รหัสระดับความเร่งด่วน"
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   43file 0..1 and
   eClaim 0..1
 * valueCodeableConcept.coding[43file] from $VS_THCC_ReferThaiPriority (required)
+* valueCodeableConcept.coding[43file].system = $CS_THCC_ReferThaiPriority (exactly)
 * valueCodeableConcept.coding[eClaim] from $VS_eClaim_ReferThaiPriority (required)
+* valueCodeableConcept.coding[eClaim].system = $CS_eClaim_ReferThaiPriority (exactly)
 
 
 
@@ -160,11 +166,12 @@ Description: "ข้อบ่งชี้/ชนิดของการเป�
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   eClaimReason 0..1
 * valueCodeableConcept.coding[eClaimReason] from $VS_eClaim_ReferPriorityCode (required)
+* valueCodeableConcept.coding[eClaimReason].system = $CS_eClaim_ReferPriorityCode (exactly)
 
 
 

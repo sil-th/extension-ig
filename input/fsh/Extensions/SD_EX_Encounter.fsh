@@ -96,16 +96,18 @@ Description: "รหัสสถานะผู้มารับบริกา
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   thccService 0..1 MS and
   thccChronic 0..1 MS and
   chiTypeOut 0..1 MS
 * valueCodeableConcept.coding[thccService] from $VS_THCC_DischargeStatus (extensible)
+* valueCodeableConcept.coding[thccService].system = $CS_THCC_DischargeStatus (exactly)
 * valueCodeableConcept.coding[thccChronic] from $VS_THCC_ChronicDischargeReason (extensible)
+* valueCodeableConcept.coding[thccChronic].system = $CS_THCC_ChronicDischargeReason (exactly)
 * valueCodeableConcept.coding[chiTypeOut] from $VS_CHI_TypeOut (extensible)
-
+* valueCodeableConcept.coding[chiTypeOut].system = $CS_CHI_TypeOut (exactly)
 
 Extension: EX_TH_EncounterDischargeInstruction
 Id: ex-encounter-discharge-instruction
@@ -265,16 +267,16 @@ Description: "รหัสประเภทสถานพยาบาลที
 * . ^definition = "รหัสประเภทสถานพยาบาลที่รักษา"
 * value[x] 1..
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
-* valueCodeableConcept.coding ^slicing.rules = #open
-* valueCodeableConcept.coding contains
+* value[x].coding ^slicing.discriminator[0].type = #value
+* value[x].coding ^slicing.discriminator[=].path = "system"
+* value[x].coding ^slicing.rules = #open
+* value[x].coding contains
   eclaim 0..1 MS and
   chi 0..1 MS
-* valueCodeableConcept.coding[eclaim] from $VS_eClaim_ProviderType (extensible)
-* valueCodeableConcept.coding[chi] from $VS_CHI_ProviderType (extensible)
-
-
+* value[x].coding[eclaim] from $VS_eClaim_ProviderType (extensible)
+* value[x].coding[eclaim].system = $CS_eClaim_ProviderType (exactly)
+* value[x].coding[chi] from $VS_CHI_ProviderType (extensible)
+* value[x].coding[chi].system = $CS_CHI_ProviderType (exactly)
 
 Extension: EX_TH_EncounterReferOutID
 Id: ex-encounter-refer-out-id
@@ -358,10 +360,12 @@ Description: "สาเหตุที่ส่งต่อผู้ป่วย
 * value[x] 1..
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding ^slicing.discriminator[0].type = #value
-* valueCodeableConcept.coding ^slicing.discriminator[=].path = "coding.system"
+* valueCodeableConcept.coding ^slicing.discriminator[=].path = "system"
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   chi 0..1 and
   eclaim 0..1
 * valueCodeableConcept.coding[chi] from $VS_CHI_ReferPurpose (required)
+* valueCodeableConcept.coding[chi].system = $CS_CHI_ReferPurpose (exactly)
 * valueCodeableConcept.coding[eclaim] from $VS_eClaim_ReferReason (required)
+* valueCodeableConcept.coding[eclaim].system = $CS_eClaim_ReferReason (exactly)
